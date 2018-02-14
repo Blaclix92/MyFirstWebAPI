@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  webapi:
+    image: webapi
+    build:
+      context: .
+      dockerfile: WebAPI/Dockerfile
+    ports:
+      - "5002:80"
+  webapplication1:
+    image: webapplication1
+    build:
+      context: .
+      dockerfile: WebApplication1/Dockerfile
+    ports:
+      - "4012:80"
